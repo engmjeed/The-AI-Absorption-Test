@@ -1,54 +1,43 @@
-# Example 01 — Generic AI Writing Wrapper
+# Example 01 — Thin AI Writing Wrapper
 
-> Illustrative archetype. This is not a claim about any specific company.
+An educational example using **The AI Absorption Test**.
 
-## Product idea
+## Product archetype
+A simple SaaS product that takes a short brief, sends it to a general AI model, and returns polished marketing copy through a custom interface.
 
-A web app where a user chooses a content type, enters a topic, and the app sends a specialized prompt to a general AI model to generate marketing copy.
+This is an archetype, not a claim about a specific company.
 
-## Result
+## Assumptions
+- No proprietary dataset.
+- No meaningful workflow integrations.
+- The core value is text generation quality and convenience.
+- Switching costs are low.
 
-**Score: 20/100 — 🔴 Likely to be absorbed**
+## Evaluation
 
-| Dimension | Score / 4 | Weight | Weighted |
+| Dimension | Score (0–4) | Weight | Weighted |
 |---|---:|---:|---:|
-| Absorption Resistance | 0 | 25 | 0.00 |
-| AI Tailwind | 1 | 15 | 3.75 |
-| Wrapper Dependence | 0 | 10 | 0.00 |
-| Compounding Assets | 1 | 15 | 3.75 |
-| Workflow Depth | 1 | 15 | 3.75 |
-| Replication Resistance | 1 | 10 | 2.50 |
-| AI-Expanded Problem | 1 | 5 | 1.25 |
-| Model Independence | 4 | 5 | 5.00 |
-| **Total** |  | **100** | **20.00** |
+| Absorption resistance | 1 | 20 | 5.0 |
+| AI growth alignment | 1 | 15 | 3.75 |
+| Compounding assets | 0 | 15 | 0.0 |
+| Workflow depth | 1 | 15 | 3.75 |
+| Replication resistance | 1 | 10 | 2.5 |
+| AI-created problem tailwind | 0 | 10 | 0.0 |
+| Model independence | 4 | 5 | 5.0 |
+| Defensive path | 1 | 10 | 2.5 |
+| **Total** |  | **100** | **22.5** |
 
-## Why it is fragile
+## Verdict
+🔴 **Likely to be absorbed — 22.5/100**
 
-1. The core capability — generating good marketing text — is increasingly native to general models.
-2. The product owns little beyond prompts and interface design.
-3. A capable competitor can reproduce most of the experience quickly.
+## Biggest absorption risk
+The core service — generating polished copy — is increasingly a native capability of general AI models.
 
-## What is likely to be absorbed?
+## Strongest defensible asset
+None yet. Distribution or proprietary brand/customer context could become one, but it is not inherent in the current product.
 
-- Drafting copy
-- Rewriting tone
-- Generating variants
-- Basic brand-style prompting
-- Simple content templates
-
-## What could make it stronger?
-
-Move from **writing generation** to an actual marketing workflow:
-
-- Connect customer and campaign data.
-- Maintain brand memory and approval rules.
-- Publish across channels.
-- Measure outcomes.
-- Learn which messages work for which segments.
-- Store organizational history and decisions.
-
-The durable product is no longer “AI writes copy.” It becomes a system that **plans, executes, measures, and learns from marketing operations**.
+## Best modification
+Move from generic copy generation into a deep marketing workflow that owns brand memory, approvals, campaign history, performance feedback, publishing integrations, and team governance.
 
 ## Decisive question
-
-**If every major AI model can produce excellent marketing copy natively, what irreplaceable reason remains for a customer to open this product?**
+If every major AI model can generate equally good copy inside its native interface, why does the customer still need this product?

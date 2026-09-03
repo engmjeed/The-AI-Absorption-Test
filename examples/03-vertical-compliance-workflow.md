@@ -1,58 +1,43 @@
 # Example 03 — Vertical Compliance Workflow
 
-> Illustrative archetype. This is not a claim about any specific company.
+An educational example using **The AI Absorption Test**.
 
-## Product idea
+## Product archetype
+A vertical compliance platform for a regulated industry. It collects evidence, maps requirements to operational controls, manages approvals and responsibilities, maintains audit history, integrates with internal systems, and uses AI to interpret documents and automate parts of the workflow.
 
-An AI-assisted compliance platform for a regulated industry. It ingests documents, maps obligations to internal policies, assigns evidence requests, tracks approvals, records decisions, monitors deadlines, and maintains an auditable system of record.
+This is an archetype, not a claim about a specific company.
 
-## Result
+## Assumptions
+- Customer-specific records and audit history compound over time.
+- The product is deeply embedded in recurring operational workflows.
+- AI is a replaceable reasoning layer rather than the product's only value.
+- Regulatory complexity and AI-generated work increase the need for traceability and control.
 
-**Score: 95/100 — 🟢 Grows with AI**
+## Evaluation
 
-| Dimension | Score / 4 | Weight | Weighted |
+| Dimension | Score (0–4) | Weight | Weighted |
 |---|---:|---:|---:|
-| Absorption Resistance | 4 | 25 | 25.00 |
-| AI Tailwind | 4 | 15 | 15.00 |
-| Wrapper Dependence | 3 | 10 | 7.50 |
-| Compounding Assets | 4 | 15 | 15.00 |
-| Workflow Depth | 4 | 15 | 15.00 |
-| Replication Resistance | 3 | 10 | 7.50 |
-| AI-Expanded Problem | 4 | 5 | 5.00 |
-| Model Independence | 4 | 5 | 5.00 |
-| **Total** |  | **100** | **95.00** |
+| Absorption resistance | 4 | 20 | 20.0 |
+| AI growth alignment | 4 | 15 | 15.0 |
+| Compounding assets | 4 | 15 | 15.0 |
+| Workflow depth | 4 | 15 | 15.0 |
+| Replication resistance | 3 | 10 | 7.5 |
+| AI-created problem tailwind | 4 | 10 | 10.0 |
+| Model independence | 4 | 5 | 5.0 |
+| Defensive path | 4 | 10 | 10.0 |
+| **Total** |  | **100** | **97.5** |
 
-## Why it is structurally stronger
+## Verdict
+🟢 **Grows with AI — 97.5/100**
 
-1. Better models improve document understanding and automation, but the product's value is not limited to document understanding.
-2. The system accumulates organization-specific evidence, policies, decision history, permissions, audit trails, and workflow state.
-3. The product participates in execution and accountability, making it closer to a system of record/control than an AI feature.
+## Biggest absorption risk
+Document interpretation, policy drafting, and basic compliance Q&A may become generic model capabilities.
 
-## What the model may absorb
-
-- Document summarization
-- Obligation extraction
-- Drafting policy language
-- Basic gap analysis
-- Natural-language search
-
-These capabilities getting cheaper actually improve the economics of the platform rather than eliminate the platform.
-
-## What can remain defensible
-
-- Historical compliance evidence
-- Organization-specific controls
-- Audit trails
-- Role and approval structures
-- Regulatory mappings
-- Integrations with operational systems
-- Deadline and remediation workflows
-- Recorded decisions and accountability
+## Strongest defensible asset
+The system-of-record layer: organization-specific evidence, control mappings, approval history, identity, permissions, integrations, accountability, and audit trail.
 
 ## Best modification
-
-Keep moving deeper into execution: automatically request evidence, route approvals, validate remediation, and preserve a complete audit history.
+Continue moving AI-generated recommendations into governed execution: approvals, evidence collection, remediation, verification, and recorded outcomes.
 
 ## Decisive question
-
-**If every model becomes excellent at reading regulations, does the customer still need this system to run, prove, and govern the compliance process?**
+If model reasoning becomes nearly free, does the product still own the trusted operational record and control loop required to prove what actually happened?

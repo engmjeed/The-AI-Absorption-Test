@@ -1,54 +1,43 @@
-# AI Product Survival Test — Lite
+# The AI Absorption Test — Lite
 
-Use this when you want a two-minute first-pass stress test.
+Use this prompt for a fast discussion before building a product.
+
+---
 
 ## Prompt
 
-Evaluate the following product idea using only three questions. Be critical, not encouraging by default.
+Stress-test the following product idea using **only 3 questions**:
 
-### 1. Will AI absorb it? — 40 points
-Assume models become 10× smarter and cheaper and the product's core function becomes a native capability inside any major AI model or platform.
+### 1. Will AI absorb it?
+Assume models become 10× smarter, faster, and cheaper, and the product's core function becomes a native capability inside a general AI model or platform.
 
-- What remains of the product?
-- Why would customers keep using it?
+**What remains of the product?**
 
-### 2. What compounds and is hard to copy? — 35 points
-Look for:
-- Proprietary data
-- Workflow depth
-- Context and history
-- Network or relationships
-- Integrations and permissions
-- System of Record / System of Control
+### 2. Does it grow with AI or against it?
+If AI capability and usage grow 100×, does the problem become larger and the product more valuable — or does the need for the product shrink?
 
-If nothing meaningful compounds with usage, treat that as a major risk.
+### 3. What does it own that the model does not?
+Identify the strongest asset that can compound and remain hard to copy: data, workflow position, relationships, network effects, integrations, decision history, permissions, distribution, system-of-record value, or something else.
 
-### 3. Does AI growth help or weaken the product? — 25 points
-If models improve and AI adoption grows 10×:
-- Does the underlying problem become larger?
-- Does the product become more valuable?
-- Or does the need for it shrink?
+Then give one concise verdict:
 
-## Scoring
+- 🟢 **Grows with AI**
+- 🟡 **Can survive but needs a stronger moat**
+- 🟠 **At risk of absorption**
+- 🔴 **Likely to be absorbed**
 
-Score each question from 0 to 4, then calculate:
+Finish with:
 
-`weighted score = (score ÷ 4) × weight`
+- **Biggest risk:** one line
+- **Strongest defense:** one line
+- **Decisive question:** one question that, if I cannot answer convincingly, means I probably should not build the product
 
-### Verdict
-- 80–100 🟢 Grows with AI
-- 60–79 🟡 Needs stronger defensibility
-- 40–59 🟠 At risk of absorption
-- 0–39 🔴 Likely to be absorbed
-
-Return:
-1. Score out of 100.
-2. Verdict.
-3. Strongest reason it survives.
-4. Biggest absorption risk.
-5. One modification that makes it stronger.
-6. One decisive question: if I cannot answer it convincingly, I probably should not build the product.
+---
 
 ## Product idea
 
-**[Describe the product here]**
+**[Describe your product here]**
+
+---
+
+For the full evaluation, use `PROMPT_EN.md`.

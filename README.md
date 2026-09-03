@@ -1,114 +1,122 @@
-# AI Product Survival Test
+# The AI Absorption Test
 
-**A framework to test whether a product grows with AI — or gets absorbed by it.**
+**اختبار الابتلاع في عصر الذكاء الاصطناعي**
 
-> قبل أن تبني أي منتج، اسأل: هل ستزداد الحاجة إليه كلما تطور الذكاء الاصطناعي، أم أن تطوره سيبتلعه ويحوّل ما يقدمه إلى ميزة رخيصة داخل النموذج؟
+> Will your product grow as AI improves — or will AI absorb it?
+>
+> هل سينمو منتجك مع تطور الذكاء الاصطناعي، أم أن هذا التطور سيبتلعه؟
 
-AI is making software cheaper to build and models more capable every month. A product can solve a real problem today and still be structurally fragile if its main value is simply a capability that general AI systems are likely to absorb.
+The AI Absorption Test is an open-source framework for stress-testing product ideas against rapid AI progress before you spend months building them.
 
-This repository provides a practical framework for stress-testing product ideas before spending months building them.
+الفكرة بسيطة: كثير من الخدمات التي يمكن بيعها اليوم كمنتج مستقل قد تتحول غدًا إلى قدرة رخيصة ومدمجة داخل نموذج أو منصة ذكاء اصطناعي. هذا الإطار يساعدك على معرفة هل منتجك **ينمو مع AI** أم يعيش على **عجز مؤقت في النماذج الحالية**.
 
-**No API required.** Copy a prompt into ChatGPT, Claude, Gemini, or another capable model, paste your product idea, and start the discussion.
+## The Absorption Rule — قاعدة الابتلاع
 
-## The core idea: The Absorption Rule
+**Before building a product, ask:**
 
-Ask one question before building:
+> If AI models become 10× smarter, faster, and cheaper, does this product become more valuable — or less necessary?
 
-> **If AI becomes 10× smarter, faster, and cheaper, does this product become more valuable — or less necessary?**
+**قبل أن تبني منتجًا، اسأل:**
 
-The goal is not to predict which model provider will ship which feature. The goal is to identify products whose value compounds with AI progress instead of depending on today's model limitations.
+> إذا أصبحت النماذج أذكى وأسرع وأرخص بعشرة أضعاف، هل تزداد قيمة المنتج أم تقل الحاجة إليه؟
 
-## What the framework tests
+## Why this exists
 
-The full test scores eight dimensions:
+AI is moving up the application stack. Features that once required a standalone SaaS product, workflow tool, or agent can increasingly become native model capabilities.
+
+The goal is not to predict which company will ship which feature. The goal is to identify whether your product owns something that compounds beyond the model itself:
+
+- proprietary data
+- workflow position
+- decision history
+- integrations
+- identity and permissions
+- network effects
+- institutional context
+- system-of-record or system-of-control value
+
+## Choose your test
+
+### ⚡ Lite — 3 questions
+Use this for a fast discussion before you build.
+
+- [العربية — Lite](./LITE_AR.md)
+- [English — Lite](./LITE_EN.md)
+
+### 🔬 Full — 8 dimensions / 100 points
+Use this for serious product evaluation.
+
+- [العربية — Full Prompt](./PROMPT_AR.md)
+- [English — Full Prompt](./PROMPT_EN.md)
+
+The full test scores the product across eight weighted dimensions:
 
 | Dimension | Weight |
 |---|---:|
-| Absorption Resistance | 25 |
-| AI Tailwind | 15 |
-| Wrapper Dependence | 10 |
-| Compounding Assets | 15 |
-| Workflow Depth | 15 |
-| Replication Resistance | 10 |
-| AI-Expanded Problem | 5 |
-| Model Independence | 5 |
+| Absorption resistance | 20 |
+| AI growth alignment | 15 |
+| Compounding assets | 15 |
+| Workflow depth | 15 |
+| Replication resistance | 10 |
+| AI-created problem tailwind | 10 |
+| Model independence | 5 |
+| Defensive path | 10 |
 | **Total** | **100** |
 
-Each dimension is scored from 0–4, then converted to its weighted contribution.
-
-### Verdicts
+### Verdict bands
 
 | Score | Verdict |
-|---:|---|
+|---|---|
 | 80–100 | 🟢 Grows with AI |
-| 60–79 | 🟡 Can survive, but needs a stronger moat or positioning |
-| 40–59 | 🟠 At risk of absorption |
-| 0–39 | 🔴 Likely to be absorbed |
+| 60–79.9 | 🟡 Can survive, but needs a stronger moat or positioning |
+| 40–59.9 | 🟠 At risk of absorption |
+| 0–39.9 | 🔴 Likely to be absorbed |
 
-The score is not meant to replace judgment. It exists to make repeated evaluations more consistent and comparable.
+## How to use it
 
-## Quick start
+1. Open ChatGPT, Claude, Gemini, or another capable model.
+2. Copy the Lite or Full prompt.
+3. Paste your product idea at the end.
+4. Debate the assumptions instead of accepting the first score.
+5. Re-run the test after changing the product positioning or moat.
 
-### Full version
-
-- Arabic: [`PROMPT_AR.md`](./PROMPT_AR.md)
-- English: [`PROMPT_EN.md`](./PROMPT_EN.md)
-
-Copy the entire prompt, paste it into your preferred AI assistant, then replace the final placeholder with your product idea.
-
-### Lite version
-
-Want a two-minute stress test instead of the full framework?
-
-- Arabic: [`LITE_AR.md`](./LITE_AR.md)
-- English: [`LITE_EN.md`](./LITE_EN.md)
-
-The Lite version asks only three questions: **Will AI absorb it? What compounds? Does AI growth help it?**
-
-## Structured output
-
-For programmatic use, ask the model to return JSON and validate the result against:
-
-[`schema/result.schema.json`](./schema/result.schema.json)
-
-This makes evaluations easier to store, compare, visualize, or later expose through an API without changing the underlying framework.
+No API is required.
 
 ## Examples
 
-The examples are illustrative product archetypes rather than claims that a specific company succeeded or failed because of this framework.
+See [`/examples`](./examples) for worked examples that show how the framework evaluates different product archetypes — from a thin AI wrapper to a deeply embedded vertical workflow.
 
-- [`examples/01-ai-writing-wrapper.md`](./examples/01-ai-writing-wrapper.md) — high absorption risk
-- [`examples/02-meeting-intelligence.md`](./examples/02-meeting-intelligence.md) — mixed / depends on workflow depth
-- [`examples/03-vertical-compliance-workflow.md`](./examples/03-vertical-compliance-workflow.md) — stronger defensive structure
+These examples are educational product archetypes, not claims that a specific real-world company succeeded or failed for one reason.
 
-## A simple before / after
+## Structured output
 
-**Weak framing:**
+Want to build this into a tool, database, evaluator, or API later?
 
-> “AI writes better sales emails for you.”
+Use the optional JSON output format defined in:
 
-If general models can already generate excellent sales emails, the core value may become a built-in feature.
+- [`schema/result.schema.json`](./schema/result.schema.json)
+- [`schema/result.example.json`](./schema/result.example.json)
 
-**Stronger framing:**
+The prompt still works perfectly as a copy-paste framework without any code.
 
-> “A sales operating system that learns account history, enforces approval rules, executes outreach across channels, records outcomes, and improves from the organization’s proprietary data.”
+## Core principle
 
-The second product still uses AI, but its value is increasingly in **workflow, context, proprietary data, permissions, execution, and accumulated history**.
+The safest AI-era product is not merely one that **uses AI**.
 
-## Defensive path
+It is one where:
 
-A durable AI product often moves in this direction:
+> **AI progress increases the product's value faster than it reduces the need for the product.**
 
-**Painkiller → Workflow → Compounding Asset → System of Record / System of Control**
+Or more simply:
 
-The model is a capability. The product should own something that survives model improvement.
+> **Grow with AI — don't build on a capability AI is about to absorb.**
 
 ## Contributing
 
-Contributions are welcome: better scoring rubrics, new tests, translations, examples, or critiques of the framework.
+This is an open framework. The tests, weights, examples, translations, and scoring rubric should improve through criticism and use.
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+Read [CONTRIBUTING.md](./CONTRIBUTING.md) before proposing changes.
 
 ## License
 
-MIT License. See [`LICENSE`](./LICENSE).
+MIT License. Free to use, copy, modify, translate, and improve.

@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.2.1 — Canonical terminology
+
+- Added `TERMINOLOGY.md` as the language source of truth.
+- Standardized English and Arabic dimension names across the framework.
+- Replaced ambiguous labels such as **AI Growth Alignment**, **Workflow Depth**, **Replication Resistance**, and **AI-Created Problem Tailwind** with clearer product-language labels.
+- Standardized Arabic product terminology, including **صعوبة التقليد**، **الاندماج في سير العمل**، **الارتباط بواقع تشغيلي**، and **الوقت اللازم لبناء حاجز تنافسي**.
+- Fixed the four public verdict labels in English and Arabic.
+- Added a strict terminology rule to `SKILL.md` so agents do not invent synonyms or literal translations.
+- Kept machine-readable JSON IDs stable for backward compatibility.
+
 ## v0.2 — Diagnose → Redesign
 
 - Added **The Absorption Principles**.

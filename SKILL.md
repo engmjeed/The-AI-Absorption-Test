@@ -3,13 +3,14 @@ name: ai-absorption-test
 description: Stress-test product ideas against AI progress using The AI Absorption Test. Use for SaaS, agents, workflows, AI-native products, marketplaces, and software ideas when deciding whether AI will commoditize the product, what remains defensible, and how to redesign it. Produces an evidence-aware 100-point diagnosis plus a Survival Design.
 license: MIT
 metadata:
-  framework_version: "0.2"
+  framework_version: "0.2.1"
   repository: "https://github.com/engmjeed/ai-product-survival-test"
 ---
 
 # The AI Absorption Test
 
 Canonical repository: https://github.com/engmjeed/ai-product-survival-test
+Canonical terminology: https://github.com/engmjeed/ai-product-survival-test/blob/main/TERMINOLOGY.md
 
 Use this skill to answer:
 
@@ -32,6 +33,37 @@ Then answer:
 - Do not double-count the same advantage across dimensions without explaining the distinct mechanism.
 - UI, prompts, access to a model, summarization, generic search, and generic agents are not durable moats by themselves.
 - Keep this framework distinct from PMF, market-size, unit-economics, or UX analysis. This score does not measure them.
+
+## Canonical terminology rule
+
+Use the labels below **exactly** in headings, score tables, and verdicts. Do not substitute synonyms or creative translations.
+
+| English | العربية الرسمية |
+|---|---|
+| Absorption Resistance | مقاومة الابتلاع |
+| AI Progress Advantage | الاستفادة من تطور الذكاء الاصطناعي |
+| Compounding Assets | الأصول التي تتراكم مع الاستخدام |
+| Workflow Integration | الاندماج في سير العمل |
+| Replication Difficulty | صعوبة التقليد |
+| AI-Expanded Problem | هل تكبر المشكلة مع انتشار الذكاء الاصطناعي؟ |
+| Model Independence | عدم الاعتماد على نموذج بعينه |
+| Defensive Path | مسار بناء الحاجز التنافسي |
+
+In Arabic, **Absorption = الابتلاع** only. Never use **الامتصاص** for the framework term.
+
+For Survival Design, use these official Arabic labels:
+
+- Survival Design → **إعادة تصميم المنتج للبقاء**
+- Absorbable Shell → **ما الذي يمكن للذكاء الاصطناعي استبداله؟**
+- Defensible Core → **ما الذي يصعب استبداله؟**
+- Value Migration → **أين تنتقل القيمة؟**
+- Reality Anchor → **الارتباط بواقع تشغيلي**
+- Workflow Evolution → **من استخدام عابر إلى سير عمل مستمر**
+- AI as a Channel → **الذكاء الاصطناعي كقناة وصول**
+- Time to Moat → **الوقت اللازم لبناء حاجز تنافسي**
+- Build Decision → **قرار البناء**
+
+Machine-readable JSON IDs are stable technical identifiers and must not be displayed as user-facing labels.
 
 ## Modes
 
@@ -72,28 +104,28 @@ Test whether the core job becomes native to a general model. If the feature beco
 
 Anchors: 0 almost all value becomes generic; 2 some durable value remains but the main feature is vulnerable; 4 AI may absorb the interface but cannot reproduce the source/state/control layer.
 
-## 2. AI Growth Alignment — 15
-Test whether better AI increases or decreases demand and whether AI usage ×100 grows the problem.
+## 2. AI Progress Advantage — 15
+Test whether better AI increases or decreases demand and whether AI usage ×100 grows the value of the product or the problem it solves.
 
-Anchors: 0 AI removes demand; 2 mixed/unclear; 4 AI structurally increases demand or value.
+Anchors: 0 AI removes demand; 2 mixed/unclear; 4 AI progress structurally increases demand or product value.
 
 ## 3. Compounding Assets — 15
 Test what exists after one year that a new competitor lacks and whether every use strengthens data, history, reputation, relationships, permissions, or network effects.
 
 Anchors: 0 nothing meaningful compounds; 2 useful but reproducible/portable asset; 4 central cumulative asset that cannot be recreated quickly.
 
-## 4. Workflow Depth — 15
+## 4. Workflow Integration — 15
 Test whether this is a one-shot tool, recurring side tool, or system in the operating loop from input to decision to execution to recorded outcome.
 
 Anchors: 0 one-shot/optional; 2 recurring but non-critical; 4 system of record/control or critical execution layer.
 
-## 5. Replication Resistance — 10
+## 5. Replication Difficulty — 10
 Assume a capable team has current AI coding tools. Identify what cannot be reproduced in one week: distribution, data, integrations, relationships, regulation, network, or physical operations.
 
 Anchors: 0 nearly all value is quickly reproducible; 2 features are copyable but some friction remains; 4 core value depends on cumulative/operational assets that cannot be copied quickly.
 
-## 6. AI-Created Problem Tailwind — 10
-Test whether AI created/amplified the problem or whether the product merely sells a capability AI itself is learning.
+## 6. AI-Expanded Problem — 10
+Test whether AI adoption creates or amplifies the underlying problem, or whether the product merely sells a capability AI itself is learning.
 
 Anchors: 0 AI shrinks/removes the problem; 2 neutral/unclear; 4 AI success itself expands the problem.
 
@@ -109,12 +141,14 @@ Evaluate:
 
 Anchors: 0 no credible path beyond the feature; 2 plausible but mostly hypothetical; 4 demonstrated mechanism or existing position toward record/control value.
 
-## Verdict
+## Fixed verdicts
 
-- 80–100: 🟢 `grows_with_ai`
-- 60–79.9: 🟡 `needs_stronger_defensibility`
-- 40–59.9: 🟠 `at_risk_of_absorption`
-- 0–39.9: 🔴 `likely_to_be_absorbed`
+Use exactly one of these four verdicts:
+
+- 80–100: 🟢 `grows_with_ai` — **Grows with AI** — **ينمو مع تطور الذكاء الاصطناعي**
+- 60–79.9: 🟡 `needs_stronger_defensibility` — **Needs stronger defensibility** — **يحتاج دفاعية أقوى**
+- 40–59.9: 🟠 `at_risk_of_absorption` — **At risk of absorption** — **معرض للابتلاع**
+- 0–39.9: 🔴 `likely_to_be_absorbed` — **Likely to be absorbed** — **غالبًا سيُبتلع**
 
 Confidence: low / medium / high.
 
@@ -122,34 +156,55 @@ Confidence: low / medium / high.
 
 Do not stop at the score.
 
-## A. Absorbable Shell / Defensible Core
-List the capabilities likely to commoditize and the parts that can remain unique and cumulative.
+## A. Absorbable Shell
+Arabic heading: **ما الذي يمكن للذكاء الاصطناعي استبداله؟**
+
+List the capabilities likely to commoditize.
 
 Core question: **If every generic AI capability became free tomorrow, what part of this product would still deserve to exist?**
 
-## B. Value Migration
+## B. Defensible Core
+Arabic heading: **ما الذي يصعب استبداله؟**
+
+Identify the product state, trust, relationships, execution rights, workflows, distribution, or accumulated assets that remain unique and cumulative.
+
+## C. Value Migration
+Arabic heading: **أين تنتقل القيمة؟**
+
 If AI absorbs the shell, identify where customer value moves: authoritative data, execution, trust, distribution, identity, compliance, transactions, accumulated history, or another layer. Recommend owning that destination.
 
-## C. Own the Source, Not the Interface
+## D. Own the Source, Not the Interface
+Arabic heading: **امتلك المصدر لا الواجهة**
+
 Ask: **If AI becomes the user's interface, does it still need this product as a source, system, permission layer, or execution layer?**
 
-## D. Reality Anchor
+## E. Reality Anchor
+Arabic heading: **الارتباط بواقع تشغيلي**
+
 Identify legitimate real-world state the product owns, verifies, or changes: transactions, contracts, approvals, identity, sensors, inventory, permissions, reputation, execution outcomes, audit trails, or operational records. If none exists, say so.
 
-## E. Episodic → Workflow
+## F. Workflow Evolution
+Arabic heading: **من استخدام عابر إلى سير عمل مستمر**
+
 If usage is one-shot or episodic, design a recurring loop:
 
 **Create → Execute → Observe → Decide → Update → Repeat**
 
 Explain what outcome from one cycle becomes state for the next.
 
-## F. AI as a Channel
+## G. AI as a Channel
+Arabic heading: **الذكاء الاصطناعي كقناة وصول**
+
 Identify a concrete way AI systems could discover, cite, call, transact through, or execute against this product. Do not claim "AI will send traffic" without a mechanism. Look for authoritative machine-readable data, APIs/tools/actions, trusted indexable records, or execution endpoints.
 
-## G. Time to Moat
+## H. Time to Moat
+Arabic heading: **الوقت اللازم لبناء حاجز تنافسي**
+
 State the first defensible asset, estimated time or milestone until meaningful, prerequisite to reach it, and the main risk before reaching it. Do not award current scoring credit for this future moat.
 
-## H. Redesign Recommendation
+## I. Redesign Recommendation
+Arabic heading: **إعادة تصميم المنتج للبقاء**
+
 Give the single highest-leverage structural change that makes the product benefit from AI progress rather than merely survive it.
 
 # Phase 3 — Build Decision
@@ -170,14 +225,16 @@ Return in this order:
 
 1. Product summary
 2. Observed facts vs assumptions
-3. Score X/100 + verdict + confidence
-4. Dimension table: dimension, score 0–4, weight, weighted score, reason
+3. Score X/100 + fixed verdict + confidence
+4. Dimension table using the canonical labels: dimension, score 0–4, weight, weighted score, reason
 5. Three reasons for the verdict
 6. Biggest absorption risk
 7. Strongest defensible asset today
-8. Survival Design: absorbable shell, defensible core, value migration, reality anchor, workflow evolution, AI distribution path, time to moat, redesign recommendation
+8. Survival Design using the canonical section labels
 9. Build decision
 10. Decisive question
+
+If answering in Arabic, use the official Arabic labels exactly as defined above. If answering in English, use the official English labels exactly as defined above.
 
 # JSON mode
 
@@ -187,6 +244,6 @@ Schema: https://github.com/engmjeed/ai-product-survival-test/blob/main/schema/re
 
 # Source and attribution
 
-Framework: **The AI Absorption Test v0.2**
+Framework: **The AI Absorption Test v0.2.1**
 Repository: https://github.com/engmjeed/ai-product-survival-test
 License: MIT

@@ -1,5 +1,5 @@
 {
-  "framework_version": "0.2",
+  "framework_version": "0.2.1",
   "product_summary": "A vertical compliance workflow that uses AI to review documents, but owns approvals, audit history, permissions, and execution records.",
   "observed_facts": [
     "The product stores approval history and user permissions.",

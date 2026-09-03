@@ -1,11 +1,13 @@
 # Scoring Rubric
-## The AI Absorption Test — v0.2
+## The AI Absorption Test — v0.2.1
 
 The Full test uses eight weighted dimensions totaling 100 points.
 
 Weighted score = `(dimension score / 4) × weight`.
 
 Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anchors below.
+
+Canonical user-facing terminology is defined in [TERMINOLOGY.md](./TERMINOLOGY.md). Use those labels exactly.
 
 ## Scoring discipline
 
@@ -16,7 +18,7 @@ Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anc
 5. **Unknown evidence lowers confidence; it does not automatically justify a high or neutral score.**
 6. Distinguish **observed facts** from **assumptions** in the final report.
 
-## 1. Absorption Resistance — weight 20
+## 1. Absorption Resistance — مقاومة الابتلاع — weight 20
 
 | Score | Anchor |
 |---|---|
@@ -24,15 +26,15 @@ Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anc
 | 2 | Some value survives in context, workflow, data, or execution, but the main feature is still vulnerable. |
 | 4 | AI may replace the interface or feature, but cannot reproduce the product's authoritative state, workflow position, execution rights, or network. |
 
-## 2. AI Growth Alignment — weight 15
+## 2. AI Progress Advantage — الاستفادة من تطور الذكاء الاصطناعي — weight 15
 
 | Score | Anchor |
 |---|---|
-| 0 | Better AI directly reduces demand for the product. |
+| 0 | Better AI directly reduces demand or makes the product less necessary. |
 | 2 | AI progress has mixed or uncertain effects. |
-| 4 | AI progress structurally increases demand, product quality, data, transactions, or the size of the problem solved. |
+| 4 | AI progress structurally increases demand, product value, data, transactions, or the size of the problem solved. |
 
-## 3. Compounding Assets — weight 15
+## 3. Compounding Assets — الأصول التي تتراكم مع الاستخدام — weight 15
 
 | Score | Anchor |
 |---|---|
@@ -40,7 +42,7 @@ Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anc
 | 2 | Useful context or data accumulates, but it is portable, reproducible, or non-essential. |
 | 4 | Every use strengthens an asset central to customer value that a new competitor cannot recreate quickly. |
 
-## 4. Workflow Depth — weight 15
+## 4. Workflow Integration — الاندماج في سير العمل — weight 15
 
 | Score | Anchor |
 |---|---|
@@ -48,7 +50,7 @@ Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anc
 | 2 | Recurring use, but not a critical system in the operating loop. |
 | 4 | The product is a system of record/control or a critical execution layer with meaningful switching cost. |
 
-## 5. Replication Resistance — weight 10
+## 5. Replication Difficulty — صعوبة التقليد — weight 10
 
 | Score | Anchor |
 |---|---|
@@ -56,7 +58,7 @@ Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anc
 | 2 | Product features are copyable, but integrations, context, or distribution create some friction. |
 | 4 | Core value depends on cumulative data, distribution, relationships, regulation, network effects, or operational infrastructure that cannot be copied quickly. |
 
-## 6. AI-Created Problem Tailwind — weight 10
+## 6. AI-Expanded Problem — هل تكبر المشكلة مع انتشار الذكاء الاصطناعي؟ — weight 10
 
 | Score | Anchor |
 |---|---|
@@ -64,7 +66,7 @@ Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anc
 | 2 | The effect is neutral or unclear. |
 | 4 | AI adoption itself creates or scales the problem the product solves. |
 
-## 7. Model Independence — weight 5
+## 7. Model Independence — عدم الاعتماد على نموذج بعينه — weight 5
 
 | Score | Anchor |
 |---|---|
@@ -72,7 +74,7 @@ Use integers from **0 to 4**. Scores 1 and 3 represent positions between the anc
 | 2 | Models are replaceable only with meaningful degradation or rework. |
 | 4 | Models are commodity suppliers; the core product value exists independently of any one model or provider. |
 
-## 8. Defensive Path — weight 10
+## 8. Defensive Path — مسار بناء الحاجز التنافسي — weight 10
 
 Evaluate:
 
@@ -84,13 +86,13 @@ Evaluate:
 | 2 | A plausible path exists, but depends on multiple unvalidated assumptions. |
 | 4 | The product already owns or has a demonstrated mechanism to reach workflow, compounding assets, and record/control value. |
 
-## Verdict bands
+## Fixed verdicts
 
-| Score | Verdict |
-|---|---|
-| 80–100 | 🟢 Grows with AI |
-| 60–79.9 | 🟡 Can survive, but needs a stronger moat or positioning |
-| 40–59.9 | 🟠 At risk of absorption |
-| 0–39.9 | 🔴 Likely to be absorbed |
+| Score | Machine value | English | العربية الرسمية |
+|---|---|---|---|
+| 80–100 | `grows_with_ai` | 🟢 Grows with AI | 🟢 ينمو مع تطور الذكاء الاصطناعي |
+| 60–79.9 | `needs_stronger_defensibility` | 🟡 Needs stronger defensibility | 🟡 يحتاج دفاعية أقوى |
+| 40–59.9 | `at_risk_of_absorption` | 🟠 At risk of absorption | 🟠 معرض للابتلاع |
+| 0–39.9 | `likely_to_be_absorbed` | 🔴 Likely to be absorbed | 🔴 غالبًا سيُبتلع |
 
 The score improves consistency. It is not mathematical certainty.

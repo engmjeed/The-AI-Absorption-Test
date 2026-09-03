@@ -17,14 +17,14 @@ This is an archetype, not a claim about a specific company.
 
 | Dimension | Score (0–4) | Weight | Weighted |
 |---|---:|---:|---:|
-| Absorption resistance | 4 | 20 | 20.0 |
-| AI growth alignment | 4 | 15 | 15.0 |
-| Compounding assets | 4 | 15 | 15.0 |
-| Workflow depth | 4 | 15 | 15.0 |
-| Replication resistance | 3 | 10 | 7.5 |
-| AI-created problem tailwind | 4 | 10 | 10.0 |
-| Model independence | 4 | 5 | 5.0 |
-| Defensive path | 4 | 10 | 10.0 |
+| Absorption Resistance | 4 | 20 | 20.0 |
+| AI Progress Advantage | 4 | 15 | 15.0 |
+| Compounding Assets | 4 | 15 | 15.0 |
+| Workflow Integration | 4 | 15 | 15.0 |
+| Replication Difficulty | 3 | 10 | 7.5 |
+| AI-Expanded Problem | 4 | 10 | 10.0 |
+| Model Independence | 4 | 5 | 5.0 |
+| Defensive Path | 4 | 10 | 10.0 |
 | **Total** |  | **100** | **97.5** |
 
 ## Verdict

@@ -8,10 +8,11 @@ These principles extend **The AI Absorption Test** from diagnosis into product r
 > The principles ask: **What should the product become afterward?**
 
 Canonical repository: https://github.com/engmjeed/ai-product-survival-test
+Canonical terminology: [TERMINOLOGY.md](./TERMINOLOGY.md)
 
 ---
 
-## 1. Value Migration — انتقال القيمة
+## 1. Value Migration — أين تنتقل القيمة؟
 
 When AI absorbs a feature, value does not always disappear. It often moves.
 
@@ -34,7 +35,7 @@ Ask:
 
 **Rule:** Being the best screen is fragile. Being the source of truth, action, or permission is stronger.
 
-## 3. Reality Anchor — مرساة الواقع
+## 3. Reality Anchor — الارتباط بواقع تشغيلي
 
 A general model can generate text, plans, summaries, code, and recommendations. It cannot invent legitimate real-world state.
 
@@ -46,7 +47,7 @@ Ask:
 
 **Rule:** The closer value is tied to real state and real consequences, the harder it is to absorb.
 
-## 4. Episodic to Workflow — من حدث إلى سير عمل
+## 4. Workflow Evolution — من استخدام عابر إلى سير عمل مستمر
 
 One-shot tools are easier to replace than products embedded in recurring work.
 
@@ -61,9 +62,9 @@ Ask:
 
 **Rule:** Move from generating an answer to participating in the full operating loop.
 
-## 5. AI as a Channel — الذكاء الاصطناعي كقناة
+## 5. AI as a Channel — الذكاء الاصطناعي كقناة وصول
 
-Do not treat AI only as a competitor. It can also become a distribution layer.
+Do not treat AI only as a competitor. It can also become a distribution or execution layer.
 
 Ask:
 - If assistants and agents become the primary interface, can they discover, cite, call, or transact through this product?
@@ -72,7 +73,7 @@ Ask:
 
 **Rule:** The strongest position may be to become infrastructure that AI uses, not an interface that competes with AI.
 
-## 6. Time to Moat — الزمن حتى ظهور الحاجز
+## 6. Time to Moat — الوقت اللازم لبناء حاجز تنافسي
 
 A future moat is not a current moat.
 
@@ -84,14 +85,14 @@ Ask:
 
 **Rule:** Score what exists today. Treat future defensibility as a hypothesis that must be validated.
 
-## 7. Absorbable Shell / Defensible Core — القشرة القابلة للابتلاع والنواة الدفاعية
+## 7. Absorbable Shell / Defensible Core — ما الذي يمكن للذكاء الاصطناعي استبداله؟ وما الذي يصعب استبداله؟
 
 Split the product into two layers.
 
-### Absorbable shell
+### Absorbable Shell — ما الذي يمكن للذكاء الاصطناعي استبداله؟
 Typical examples: UI, prompts, generic search, summarization, generation, classification, basic agents, and generic automation.
 
-### Defensible core
+### Defensible Core — ما الذي يصعب استبداله؟
 Typical examples: proprietary state, real-world events, identity and permissions, trusted records, workflow ownership, transaction history, network effects, distribution, and execution authority.
 
 Ask:
@@ -102,18 +103,19 @@ Ask:
 
 ---
 
-# Survival Design
+# Survival Design — إعادة تصميم المنتج للبقاء
 
-After every Full evaluation, produce a **Survival Design** with:
+After every Full evaluation, produce a **Survival Design** with these canonical sections:
 
-1. Absorbable shell
-2. Defensible core
-3. Value migration
-4. Reality anchor
-5. Workflow evolution
-6. AI distribution path
-7. Time to moat
-8. Redesign recommendation
-9. Build decision
+1. Absorbable Shell — **ما الذي يمكن للذكاء الاصطناعي استبداله؟**
+2. Defensible Core — **ما الذي يصعب استبداله؟**
+3. Value Migration — **أين تنتقل القيمة؟**
+4. Own the Source, Not the Interface — **امتلك المصدر لا الواجهة**
+5. Reality Anchor — **الارتباط بواقع تشغيلي**
+6. Workflow Evolution — **من استخدام عابر إلى سير عمل مستمر**
+7. AI as a Channel — **الذكاء الاصطناعي كقناة وصول**
+8. Time to Moat — **الوقت اللازم لبناء حاجز تنافسي**
+9. Redesign Recommendation — **إعادة تصميم المنتج للبقاء**
+10. Build Decision — **قرار البناء**
 
 The Survival Design does **not** receive a second numerical score. The 100-point score diagnoses the current product; the Survival Design explains how to improve it.

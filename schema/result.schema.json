@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/engmjeed/ai-product-survival-test/blob/main/schema/result.schema.json",
   "title": "The AI Absorption Test Result",
-  "description": "Structured Full-mode output for The AI Absorption Test v0.2.",
+  "description": "Structured Full-mode output for The AI Absorption Test v0.2.1. User-facing labels are defined in TERMINOLOGY.md; legacy JSON IDs remain stable for compatibility.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -22,7 +22,7 @@
     "decisive_question"
   ],
   "properties": {
-    "framework_version": {"const": "0.2"},
+    "framework_version": {"const": "0.2.1"},
     "product_summary": {"type": "string", "minLength": 1},
     "observed_facts": {"type": "array", "items": {"type": "string"}},
     "assumptions": {"type": "array", "items": {"type": "string"}},
@@ -43,6 +43,7 @@
         "properties": {
           "id": {
             "type": "string",
+            "description": "Stable technical identifier. Do not display this value as the user-facing dimension label; use TERMINOLOGY.md.",
             "enum": [
               "absorption_resistance",
               "ai_growth_alignment",

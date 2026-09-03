@@ -16,18 +16,18 @@ This is an archetype, not a claim about a specific company.
 
 | Dimension | Score (0–4) | Weight | Weighted |
 |---|---:|---:|---:|
-| Absorption resistance | 2 | 20 | 10.0 |
-| AI growth alignment | 3 | 15 | 11.25 |
-| Compounding assets | 3 | 15 | 11.25 |
-| Workflow depth | 3 | 15 | 11.25 |
-| Replication resistance | 2 | 10 | 5.0 |
-| AI-created problem tailwind | 3 | 10 | 7.5 |
-| Model independence | 4 | 5 | 5.0 |
-| Defensive path | 3 | 10 | 7.5 |
+| Absorption Resistance | 2 | 20 | 10.0 |
+| AI Progress Advantage | 3 | 15 | 11.25 |
+| Compounding Assets | 3 | 15 | 11.25 |
+| Workflow Integration | 3 | 15 | 11.25 |
+| Replication Difficulty | 2 | 10 | 5.0 |
+| AI-Expanded Problem | 3 | 10 | 7.5 |
+| Model Independence | 4 | 5 | 5.0 |
+| Defensive Path | 3 | 10 | 7.5 |
 | **Total** |  | **100** | **68.75** |
 
 ## Verdict
-🟡 **Can survive, but needs stronger defensibility — 68.75/100**
+🟡 **Needs stronger defensibility — 68.75/100**
 
 ## Biggest absorption risk
 Transcription, summarization, and action-item extraction can become native capabilities inside conferencing platforms and general AI assistants.

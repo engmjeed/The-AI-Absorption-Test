@@ -1,87 +1,53 @@
 {
-  "product_summary": "A meeting intelligence product that turns conversations into organizational memory and execution workflows.",
-  "assumptions": [
-    "The product integrates with calendar, CRM, and project systems.",
-    "Meeting history and customer-specific context compound over time.",
-    "The product owns post-meeting follow-up, not transcription alone."
+  "framework_version": "0.2",
+  "product_summary": "A vertical compliance workflow that uses AI to review documents, but owns approvals, audit history, permissions, and execution records.",
+  "observed_facts": [
+    "The product stores approval history and user permissions.",
+    "AI is used for document analysis rather than as the sole system of record."
   ],
-  "score": 68.75,
-  "verdict": "needs_stronger_defensibility",
+  "assumptions": [
+    "Customers treat the approval history as operationally important.",
+    "The workflow is used repeatedly rather than for one-time analysis."
+  ],
+  "score": 87.5,
+  "verdict": "grows_with_ai",
   "confidence": "medium",
   "dimensions": [
-    {
-      "id": "absorption_resistance",
-      "score": 2,
-      "weight": 20,
-      "weighted_score": 10,
-      "reason": "Transcription and summarization can become native, but the surrounding workflow remains valuable."
-    },
-    {
-      "id": "ai_growth_alignment",
-      "score": 3,
-      "weight": 15,
-      "weighted_score": 11.25,
-      "reason": "Better models improve extraction, search, and follow-up quality."
-    },
-    {
-      "id": "compounding_assets",
-      "score": 3,
-      "weight": 15,
-      "weighted_score": 11.25,
-      "reason": "Historical meeting context and organizational memory compound with use."
-    },
-    {
-      "id": "workflow_depth",
-      "score": 3,
-      "weight": 15,
-      "weighted_score": 11.25,
-      "reason": "The product connects meetings to tasks, CRM records, and follow-up."
-    },
-    {
-      "id": "replication_resistance",
-      "score": 2,
-      "weight": 10,
-      "weighted_score": 5,
-      "reason": "Core AI functions are reproducible, while integrations and accumulated context are harder to copy."
-    },
-    {
-      "id": "ai_created_problem_tailwind",
-      "score": 3,
-      "weight": 10,
-      "weighted_score": 7.5,
-      "reason": "More AI-generated communication increases the need to capture decisions, ownership, and follow-through."
-    },
-    {
-      "id": "model_independence",
-      "score": 4,
-      "weight": 5,
-      "weighted_score": 5,
-      "reason": "The reasoning model can be swapped without destroying the workflow or stored organizational context."
-    },
-    {
-      "id": "defensive_path",
-      "score": 3,
-      "weight": 10,
-      "weighted_score": 7.5,
-      "reason": "The product can evolve from a meeting utility into an execution and decision system of record."
-    }
+    {"id":"absorption_resistance","score":4,"weight":20,"weighted_score":20,"reason":"AI can commoditize document analysis but not the authoritative approval and audit state."},
+    {"id":"ai_growth_alignment","score":4,"weight":15,"weighted_score":15,"reason":"Better models improve review quality without eliminating the compliance workflow."},
+    {"id":"compounding_assets","score":4,"weight":15,"weighted_score":15,"reason":"Audit history, decisions, and organization-specific context accumulate with every case."},
+    {"id":"workflow_depth","score":4,"weight":15,"weighted_score":15,"reason":"The product participates in review, decision, approval, and recorded outcome."},
+    {"id":"replication_resistance","score":3,"weight":10,"weighted_score":7.5,"reason":"UI and analysis can be copied, but institutional history and integrations cannot be recreated quickly."},
+    {"id":"ai_created_problem_tailwind","score":2,"weight":10,"weighted_score":5,"reason":"AI does not necessarily create compliance demand, though it increases document volume and automation expectations."},
+    {"id":"model_independence","score":4,"weight":5,"weighted_score":5,"reason":"The underlying model can be replaced while the workflow and records remain valuable."},
+    {"id":"defensive_path","score":2,"weight":10,"weighted_score":5,"reason":"A path to system-of-record value is plausible but still depends on customer adoption and retention."}
   ],
   "why": [
-    "The native meeting-summary layer is vulnerable to absorption.",
-    "Organizational memory and workflow integrations create durable value beyond the model.",
-    "The product becomes stronger if it owns execution after the meeting rather than only the meeting artifact."
+    "The durable value sits in authoritative workflow state rather than generation alone.",
+    "Usage compounds operational history and permissions.",
+    "AI progress improves the replaceable analysis layer while leaving the control layer necessary."
   ],
-  "likely_to_be_absorbed": [
-    "Transcription",
-    "Generic meeting summaries",
-    "Basic action-item extraction"
-  ],
-  "defensible_assets": [
-    "Historical organizational context",
-    "Workflow integrations",
-    "Decision and commitment history",
-    "Execution records"
-  ],
-  "best_modification": "Own the post-meeting execution loop: commitments, approvals, CRM updates, accountability, and follow-up.",
-  "decisive_question": "If transcription and summarization become free native features, does the product still own a workflow customers cannot easily replace?"
+  "biggest_absorption_risk": "Document review, extraction, summarization, and recommendation quality may become generic model capabilities.",
+  "strongest_defensible_asset": "Organization-specific approval history, permissions, and audit records.",
+  "survival_design": {
+    "absorbable_shell": ["document summarization", "classification", "draft recommendations"],
+    "defensible_core": ["approval state", "audit trail", "permissions", "integration-driven execution"],
+    "value_migration": "As document analysis becomes cheap, value moves toward trusted decisions, execution, accountability, and historical context.",
+    "reality_anchor": {
+      "status": "strong",
+      "anchors": ["approvals", "verified users", "audit records", "execution outcomes"],
+      "explanation": "These records reflect legitimate organizational actions that a general model cannot invent."
+    },
+    "workflow_evolution": "Make every review produce an approval state and outcome that becomes context for the next review cycle.",
+    "ai_distribution_path": "Expose permissioned compliance status and actions through APIs/tools so enterprise agents can query or initiate approved workflow steps.",
+    "time_to_moat": {
+      "first_defensible_asset": "trusted approval and audit history",
+      "milestone_or_time": "after repeated live cases inside one organization",
+      "prerequisite": "customers must route real approvals through the product",
+      "risk_before_moat": "a competitor can copy the analysis UI before meaningful workflow history accumulates"
+    },
+    "redesign_recommendation": "Treat AI analysis as a replaceable module and make approvals, permissions, audit state, and execution the product core."
+  },
+  "build_decision": "build_and_strengthen_moat",
+  "decisive_question": "Will customers route real compliance decisions through the product, or only use it to generate disposable analysis?"
 }

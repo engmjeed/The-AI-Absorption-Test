@@ -1,144 +1,126 @@
 # The AI Absorption Test
-## Full English Edition
+## Full English Edition — v0.2
 
-**Core idea: The Absorption Rule**
+Act as a critical product analyst, not a cheerleader.
 
-> Before building any product, ask: Will demand for it grow as AI improves, or will AI progress absorb it and turn its core service into a cheap built-in capability?
+Your job has two stages:
 
----
+1. **Absorption Diagnosis** — score whether the current product becomes stronger or less necessary as AI improves.
+2. **Survival Design** — identify what AI will commoditize and redesign the product around what remains defensible.
 
-## Prompt
+Do not assume that using AI is a moat. Do not invent traction, data, network effects, switching costs, or distribution.
 
-Act as a critical product analyst and technology investor, not as a cheerleader for the idea.
+## Evidence discipline
 
-I will give you a product idea. Your job is to start a rigorous discussion to test whether the product can survive and become more valuable as artificial intelligence improves.
+Before scoring:
+- summarize the product in two lines;
+- distinguish **observed facts** from **assumptions**;
+- identify only critical unknowns that could materially change the score;
+- score the current product, not a hypothetical future moat;
+- do not double-count one advantage across multiple dimensions without a distinct mechanism.
 
-Do not assume that a real problem automatically means a good product. Do not be impressed by AI, agents, or automation by themselves.
+## Scoring
 
-Your main objective is to determine:
+Score each dimension 0–4 and calculate `(score / 4) × weight`.
 
-**Will this product become stronger and more valuable as AI improves, or will AI progress absorb it and turn what it sells into a cheap built-in capability inside models or AI platforms?**
+0 = severe risk, 1 = weak, 2 = mixed/uncertain, 3 = strong, 4 = very strong.
 
-Evaluate the product across 8 dimensions. Score each dimension from 0 to 4, then apply the assigned weight.
+### 1. Absorption Resistance — 20
+Assume models become 10× smarter, faster, and cheaper and can add the core feature natively. What remains outside the model: authoritative state, execution, permissions, workflow, relationships, or network?
 
-### Scoring scale
+### 2. AI Growth Alignment — 15
+Does better AI increase or decrease demand? If AI usage grows 100×, does the underlying problem grow or shrink?
 
-- **0** = severe risk / no defensibility
-- **1** = weak
-- **2** = mixed or uncertain
-- **3** = strong
-- **4** = very strong / clearly durable
+### 3. Compounding Assets — 15
+What exists after one year of use that a new competitor cannot possess on day one? Does every use strengthen data, history, reputation, relationships, permissions, or network effects?
 
-Weighted score per dimension = `(score ÷ 4) × weight`.
+### 4. Workflow Depth — 15
+Is this one-shot, recurring, or part of a real operating loop from input to decision to execution to recorded outcome? What switching cost exists?
 
----
+### 5. Replication Resistance — 10
+Assume a capable team has current AI coding tools. What meaningful value cannot be reproduced in one week?
 
-### 1. Absorption Resistance — weight 20
-Assume AI models become 10× smarter, faster, and cheaper, and that any model or AI platform can add the product's core function as a cheap built-in capability.
+### 6. AI-Created Problem Tailwind — 10
+Has AI created or amplified the problem, or is the product selling a capability AI itself is learning?
 
-- Is the product still necessary?
-- Can users perform the core job directly inside the model?
-- If the core function becomes a generic feature, what remains?
-- Is the value in the function itself, or in something deeper a general model cannot easily provide?
+### 7. Model Independence — 5
+Can the underlying model/provider be swapped without destroying the product's value?
 
-### 2. AI Growth Alignment — weight 15
-- Does model improvement automatically make the product better?
-- Or does every improvement reduce the need for it?
-- If global AI usage grows 100×, does the problem this product solves become larger or smaller?
-
-### 3. Compounding Assets — weight 15
-Look for assets that become more valuable with usage, such as proprietary data, long-term context, decision history, relationships, network effects, institutional knowledge, operational records, integrations, identity and permissions, or system-of-record value.
-
-- What does the product own after one year of usage that a new competitor cannot own on day one?
-- Does that asset materially matter to the customer?
-
-### 4. Workflow Depth — weight 15
-Evaluate whether the product is a side tool or embedded in a real operational workflow.
-
-A stronger pattern is:
-
-**Input → Understanding → Decision → Execution → Follow-up → Recorded outcome**
-
-- Does real work flow through the product?
-- Would replacing it create meaningful switching costs?
-
-### 5. Replication Resistance — weight 10
-Assume a capable team has access to the latest AI models and generative coding tools.
-
-- How much of the product could they reproduce in one week?
-- What part remains hard to copy?
-- Is the moat data, distribution, workflow, relationships, or integrations — or merely UI and prompts?
-
-### 6. AI-Created Problem Tailwind — weight 10
-Do not ask only: **What can AI do?**
-
-Also ask: **What problem has widespread AI adoption created or made significantly worse?**
-
-- Does AI's success increase the size of the problem this product solves?
-- Or is the product selling a capability AI itself is likely to absorb?
-
-### 7. Model Independence — weight 5
-- Can the underlying model or provider be replaced without destroying the product's value?
-- Is the model a replaceable supplier, or is it almost the entire product?
-
-### 8. Defensive Path — weight 10
-Test whether the product can evolve along this path:
+### 8. Defensive Path — 10
+Evaluate:
 
 **Painkiller → Workflow → Compounding Asset → System of Record / System of Control**
 
-- Does it start with a real pain?
-- Can it become part of the daily workflow?
-- Can it eventually own the truth or control execution?
+## Verdict bands
+
+- 80–100: 🟢 Grows with AI
+- 60–79.9: 🟡 Can survive, but needs stronger defensibility
+- 40–59.9: 🟠 At risk of absorption
+- 0–39.9: 🔴 Likely to be absorbed
+
+The score is a consistency tool, not mathematical truth. State confidence: low / medium / high.
 
 ---
 
-## Discussion Style
+# Survival Design
 
-Do not give me the final score immediately.
+After the score, always perform these steps.
 
-First summarize the idea in two lines and identify the two or three most important assumptions behind it. Then challenge the weaknesses one by one, asking only questions whose answers could materially change the judgment.
+### 1. Absorbable Shell
+List the UI, prompts, generic generation/search/summarization/automation, or other capabilities AI is likely to commoditize.
 
-Stress-test the idea against rapid model improvement, model providers moving up the application stack, falling software development costs, ease of replication, and standalone services becoming built-in features.
+### 2. Defensible Core
+Identify proprietary state, real-world events, identity, permissions, trusted records, transactions, workflow ownership, network, distribution, or execution rights that can remain unique.
 
-Then score every dimension from 0 to 4 with a brief reason.
+### 3. Value Migration
+If the shell becomes free, where does customer value move? Can the product own that layer?
 
-## Final Score
+### 4. Reality Anchor
+What legitimate real-world state does the product own, verify, or change that a model cannot generate by itself?
 
-Add the weighted scores to produce a result out of 100:
+### 5. Workflow Evolution
+If use is episodic, redesign it into a recurring loop:
 
-- **80–100:** 🟢 Grows with AI
-- **60–79.9:** 🟡 Can survive, but needs a stronger moat or positioning
-- **40–59.9:** 🟠 At risk of absorption
-- **0–39.9:** 🔴 Likely to be absorbed
+**Create → Execute → Observe → Decide → Update → Repeat**
 
-> The score is a tool for consistency, not mathematical truth. If information is missing, state your confidence level and do not invent facts.
+### 6. AI Distribution Path
+If AI becomes the user's interface, how can it discover, cite, call, transact through, or execute against this product? Give a concrete mechanism, not a slogan.
 
----
+### 7. Time to Moat
+Identify the first defensible asset, the milestone/time until it matters, the prerequisite to reach it, and the main risk before reaching it. Do not count this future moat in the present score.
 
-## Final Output
+### 8. Redesign Recommendation
+Give the single highest-leverage structural change that makes the product benefit from AI progress.
+
+### 9. Build Decision
+Choose one:
+- `build_as_is`
+- `build_and_strengthen_moat`
+- `validate_defensibility_first`
+- `redesign_before_building`
+- `do_not_build_as_is`
+
+## Final output
 
 Return:
+1. Product summary
+2. Observed facts vs assumptions
+3. Score X/100, verdict, confidence
+4. Dimension table with score, weight, weighted score, reason
+5. Exactly three reasons for the verdict
+6. Biggest absorption risk
+7. Strongest defensible asset today
+8. Survival Design
+9. Build decision
+10. Decisive question
 
-1. **Score:** X/100
-2. **Verdict:** one of the four verdicts above
-3. **Dimension table:** dimension, 0–4 score, weight, weighted score, short reason
-4. **Biggest absorption risk:** the function most likely to become a generic model capability
-5. **Strongest defensible asset:** what can compound and remain hard to copy
-6. **Best modification:** one change that would make the product benefit from AI progress rather than fear it
-7. **Decisive question:** one question that, if I cannot answer convincingly, means I probably should not build the product
-8. **Confidence:** low / medium / high
+If I request `JSON`, return JSON only according to `schema/result.schema.json`.
 
-### Optional JSON output
-If I ask for `JSON`, return the same evaluation using the structure in `schema/result.schema.json` with no additional prose outside the JSON object.
-
----
+Full principles: `PRINCIPLES.md`
+Detailed score anchors: `SCORING.md`
 
 ## Start
 
 Here is the product idea:
 
 **[Describe the product here]**
-
----
-
-Licensed under the MIT License. Free to use, copy, modify, translate, and improve.

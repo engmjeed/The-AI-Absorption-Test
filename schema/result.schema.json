@@ -1,31 +1,31 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/engmjeed/ai-absorption-test/blob/main/schema/result.schema.json",
+  "$id": "https://github.com/engmjeed/ai-product-survival-test/blob/main/schema/result.schema.json",
   "title": "The AI Absorption Test Result",
-  "description": "Structured output for The AI Absorption Test framework.",
+  "description": "Structured Full-mode output for The AI Absorption Test v0.2.",
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "framework_version",
     "product_summary",
+    "observed_facts",
     "assumptions",
     "score",
     "verdict",
     "confidence",
     "dimensions",
     "why",
-    "likely_to_be_absorbed",
-    "defensible_assets",
-    "best_modification",
+    "biggest_absorption_risk",
+    "strongest_defensible_asset",
+    "survival_design",
+    "build_decision",
     "decisive_question"
   ],
   "properties": {
+    "framework_version": {"const": "0.2"},
     "product_summary": {"type": "string", "minLength": 1},
-    "assumptions": {
-      "type": "array",
-      "minItems": 1,
-      "maxItems": 5,
-      "items": {"type": "string"}
-    },
+    "observed_facts": {"type": "array", "items": {"type": "string"}},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
     "score": {"type": "number", "minimum": 0, "maximum": 100},
     "verdict": {
       "type": "string",
@@ -67,9 +67,55 @@
       "maxItems": 3,
       "items": {"type": "string"}
     },
-    "likely_to_be_absorbed": {"type": "array", "items": {"type": "string"}},
-    "defensible_assets": {"type": "array", "items": {"type": "string"}},
-    "best_modification": {"type": "string", "minLength": 1},
+    "biggest_absorption_risk": {"type": "string", "minLength": 1},
+    "strongest_defensible_asset": {"type": "string", "minLength": 1},
+    "survival_design": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "absorbable_shell",
+        "defensible_core",
+        "value_migration",
+        "reality_anchor",
+        "workflow_evolution",
+        "ai_distribution_path",
+        "time_to_moat",
+        "redesign_recommendation"
+      ],
+      "properties": {
+        "absorbable_shell": {"type": "array", "items": {"type": "string"}},
+        "defensible_core": {"type": "array", "items": {"type": "string"}},
+        "value_migration": {"type": "string", "minLength": 1},
+        "reality_anchor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "anchors", "explanation"],
+          "properties": {
+            "status": {"type": "string", "enum": ["strong", "partial", "weak", "none", "unknown"]},
+            "anchors": {"type": "array", "items": {"type": "string"}},
+            "explanation": {"type": "string"}
+          }
+        },
+        "workflow_evolution": {"type": "string", "minLength": 1},
+        "ai_distribution_path": {"type": "string", "minLength": 1},
+        "time_to_moat": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["first_defensible_asset", "milestone_or_time", "prerequisite", "risk_before_moat"],
+          "properties": {
+            "first_defensible_asset": {"type": "string", "minLength": 1},
+            "milestone_or_time": {"type": "string", "minLength": 1},
+            "prerequisite": {"type": "string", "minLength": 1},
+            "risk_before_moat": {"type": "string", "minLength": 1}
+          }
+        },
+        "redesign_recommendation": {"type": "string", "minLength": 1}
+      }
+    },
+    "build_decision": {
+      "type": "string",
+      "enum": ["build_as_is", "build_and_strengthen_moat", "validate_defensibility_first", "redesign_before_building", "do_not_build_as_is"]
+    },
     "decisive_question": {"type": "string", "minLength": 1}
   }
 }

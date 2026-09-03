@@ -20,7 +20,7 @@ A framework change should:
 4. preserve canonical terminology or update `TERMINOLOGY.md` first;
 5. update every affected artifact in the same Pull Request;
 6. pass repository validation checks;
-7. receive maintainer approval before merge.
+7. be reviewed by the maintainer before merge.
 
 ## High-impact changes
 
@@ -40,16 +40,20 @@ Editorial fixes that do not change meaning may be merged without a version bump,
 
 `main` is the canonical published version of the framework.
 
-The intended repository policy is:
+For the current sole-maintainer repository, the intended policy is:
 
-- changes enter through Pull Requests;
-- at least one approving review is required;
-- Code Owner review is required for core framework files;
+- direct pushes to `main` are blocked;
+- every change enters through a Pull Request;
+- the maintainer manually reviews and merges the Pull Request;
+- required validation checks must pass before merge;
 - unresolved review conversations block merge;
-- required validation checks must pass;
 - force pushes and branch deletion are blocked;
-- approval is dismissed when new commits materially change an approved Pull Request;
+- automatic merging is not used for framework changes;
 - the maintainer retains administrative recovery access.
+
+GitHub does not allow a Pull Request author to approve their own Pull Request. Therefore, while the repository has one maintainer, the merge action itself is the maintainer approval gate rather than requiring a numerical approval count.
+
+If additional collaborators with write access are added later, enable at least one required approval and require Code Owner review so that core framework changes cannot merge without `@engmjeed` approval.
 
 ## Releases
 

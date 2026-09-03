@@ -8,6 +8,10 @@
 
 The AI Absorption Test is an open-source framework for stress-testing product ideas against rapid AI progress **and redesigning them around what AI cannot easily commoditize**.
 
+**Current framework version:** `v0.2.1`  
+**License:** MIT  
+**Maintainer:** [@engmjeed](https://github.com/engmjeed)
+
 ## The core rule — قاعدة الابتلاع
 
 > If AI models become 10× smarter, faster, and cheaper, does this product become more valuable — or less necessary?
@@ -82,7 +86,7 @@ Use [`SKILL.md`](./SKILL.md). It is self-contained and includes the scoring rule
 
 Raw file:
 
-https://raw.githubusercontent.com/engmjeed/ai-product-survival-test/main/SKILL.md
+https://raw.githubusercontent.com/engmjeed/The-AI-Absorption-Test/main/SKILL.md
 
 ## The Absorption Principles
 
@@ -115,6 +119,12 @@ See [`/examples`](./examples) for worked product archetypes. Examples are educat
 
 This score is **not** a PMF score, market-size score, unit-economics score, or UX score. A product can be highly defensible and still be a bad business, or be commercially successful for a period while remaining structurally absorbable.
 
+## Governance
+
+`main` is the canonical published framework. Contributions should enter through Pull Requests and pass the repository validation workflow before merge. Core framework files are owned by `@engmjeed` through `CODEOWNERS`.
+
+Read [GOVERNANCE.md](./GOVERNANCE.md) for the maintainer policy and [CONTRIBUTING.md](./CONTRIBUTING.md) before proposing changes.
+
 ## Core principle
 
 > **AI progress should increase your product's value faster than it reduces the need for your product.**
@@ -125,7 +135,7 @@ And after diagnosis:
 
 ## Contributing
 
-The framework is open to criticism and improvement. Read [CONTRIBUTING.md](./CONTRIBUTING.md).
+The framework is open to criticism and improvement. Contributions are reviewed against the canonical terminology, scoring discipline, and evidence rules.
 
 ## License
 

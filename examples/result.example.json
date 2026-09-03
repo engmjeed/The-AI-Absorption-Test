@@ -1,91 +1,87 @@
 {
-  "product_summary": "An AI-assisted compliance platform that turns regulatory requirements into operational workflows, approvals, evidence requests, deadlines, and an auditable system of record.",
+  "product_summary": "A meeting intelligence product that turns conversations into organizational memory and execution workflows.",
   "assumptions": [
-    "The product is used inside a regulated organization rather than only as a document Q&A tool.",
-    "It stores organization-specific evidence, permissions, decisions, and workflow history.",
-    "Underlying AI models can be replaced over time."
+    "The product integrates with calendar, CRM, and project systems.",
+    "Meeting history and customer-specific context compound over time.",
+    "The product owns post-meeting follow-up, not transcription alone."
   ],
-  "score": 95,
-  "verdict": "grows_with_ai",
-  "confidence": "high",
+  "score": 68.75,
+  "verdict": "needs_stronger_defensibility",
+  "confidence": "medium",
   "dimensions": [
     {
       "id": "absorption_resistance",
-      "score": 4,
-      "weight": 25,
-      "weighted_score": 25,
-      "reason": "Native model improvements can absorb analysis tasks, but not the organization's governed compliance process and record."
+      "score": 2,
+      "weight": 20,
+      "weighted_score": 10,
+      "reason": "Transcription and summarization can become native, but the surrounding workflow remains valuable."
     },
     {
-      "id": "ai_tailwind",
-      "score": 4,
-      "weight": 15,
-      "weighted_score": 15,
-      "reason": "Better models reduce the cost of interpreting documents and increase the product's automation capacity."
-    },
-    {
-      "id": "wrapper_dependence",
+      "id": "ai_growth_alignment",
       "score": 3,
-      "weight": 10,
-      "weighted_score": 7.5,
-      "reason": "AI is important, but the product also owns workflow, permissions, audit state, and integrations."
+      "weight": 15,
+      "weighted_score": 11.25,
+      "reason": "Better models improve extraction, search, and follow-up quality."
     },
     {
       "id": "compounding_assets",
-      "score": 4,
+      "score": 3,
       "weight": 15,
-      "weighted_score": 15,
-      "reason": "Evidence, mappings, decision history, and organizational controls compound over time."
+      "weighted_score": 11.25,
+      "reason": "Historical meeting context and organizational memory compound with use."
     },
     {
       "id": "workflow_depth",
-      "score": 4,
+      "score": 3,
       "weight": 15,
-      "weighted_score": 15,
-      "reason": "The product participates in assignment, approval, remediation, follow-up, and audit."
+      "weighted_score": 11.25,
+      "reason": "The product connects meetings to tasks, CRM records, and follow-up."
     },
     {
       "id": "replication_resistance",
+      "score": 2,
+      "weight": 10,
+      "weighted_score": 5,
+      "reason": "Core AI functions are reproducible, while integrations and accumulated context are harder to copy."
+    },
+    {
+      "id": "ai_created_problem_tailwind",
       "score": 3,
       "weight": 10,
       "weighted_score": 7.5,
-      "reason": "The interface can be copied quickly, but mature integrations, regulatory mappings, and customer history cannot."
-    },
-    {
-      "id": "ai_expanded_problem",
-      "score": 4,
-      "weight": 5,
-      "weighted_score": 5,
-      "reason": "More automated systems increase the need for governance, evidence, control, and auditability."
+      "reason": "More AI-generated communication increases the need to capture decisions, ownership, and follow-through."
     },
     {
       "id": "model_independence",
       "score": 4,
       "weight": 5,
       "weighted_score": 5,
-      "reason": "The model can be treated as a replaceable inference supplier."
+      "reason": "The reasoning model can be swapped without destroying the workflow or stored organizational context."
+    },
+    {
+      "id": "defensive_path",
+      "score": 3,
+      "weight": 10,
+      "weighted_score": 7.5,
+      "reason": "The product can evolve from a meeting utility into an execution and decision system of record."
     }
   ],
   "why": [
-    "Core AI capabilities becoming cheaper improves product economics rather than removing the operational need.",
-    "The product accumulates organization-specific data, workflow state, permissions, and audit history.",
-    "It can become a system of record and control rather than a standalone AI feature."
+    "The native meeting-summary layer is vulnerable to absorption.",
+    "Organizational memory and workflow integrations create durable value beyond the model.",
+    "The product becomes stronger if it owns execution after the meeting rather than only the meeting artifact."
   ],
   "likely_to_be_absorbed": [
-    "document summarization",
-    "obligation extraction",
-    "policy drafting",
-    "basic gap analysis"
+    "Transcription",
+    "Generic meeting summaries",
+    "Basic action-item extraction"
   ],
   "defensible_assets": [
-    "audit history",
-    "organization-specific controls",
-    "evidence records",
-    "approval workflows",
-    "regulatory mappings",
-    "operational integrations"
+    "Historical organizational context",
+    "Workflow integrations",
+    "Decision and commitment history",
+    "Execution records"
   ],
-  "best_modification": "Move deeper into execution by automatically requesting evidence, routing approvals, validating remediation, and preserving complete audit history.",
-  "defensive_path": "Painkiller → Workflow → Compounding Asset → System of Record / System of Control",
-  "decisive_question": "If every general model becomes excellent at reading regulations, does the customer still need this system to run, prove, and govern the compliance process?"
+  "best_modification": "Own the post-meeting execution loop: commitments, approvals, CRM updates, accountability, and follow-up.",
+  "decisive_question": "If transcription and summarization become free native features, does the product still own a workflow customers cannot easily replace?"
 }

@@ -95,7 +95,7 @@ Want to build this into a tool, database, evaluator, or API later?
 Use the optional JSON output format defined in:
 
 - [`schema/result.schema.json`](./schema/result.schema.json)
-- [`schema/result.example.json`](./schema/result.example.json)
+- [`examples/result.example.json`](./examples/result.example.json)
 
 The prompt still works perfectly as a copy-paste framework without any code.
 

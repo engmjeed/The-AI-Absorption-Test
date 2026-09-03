@@ -11,119 +11,112 @@
 
 Act as a critical product analyst and technology investor, not as a cheerleader for the idea.
 
-I will give you a product idea. Your job is to start a rigorous discussion to test whether the product can survive and become more valuable as artificial intelligence improves.
+I will give you a product idea. Your job is to test whether it can survive and become more valuable as AI improves. Do not assume that a real problem automatically means a good product, and do not treat AI, agents, or automation as a moat by themselves.
 
-Do not assume that a real problem automatically means a good product. Do not be impressed by AI, agents, or automation by themselves.
+Your main objective is to answer one question:
 
-Your main objective is to determine:
+**Does this product become stronger as AI improves, or does AI progress reduce the need for it and turn its core service into a generic, inexpensive capability?**
 
-**Will this product become stronger and more valuable as AI improves, or will AI progress absorb it and turn what it sells into a cheap built-in capability inside models or AI platforms?**
+## Tests
 
-Analyze the product using the following tests.
+### 1. Absorption Resistance — weight 25
+Assume models become 10× smarter, faster, and cheaper, and that any AI model or platform can add the product's core function as a native feature.
 
-### 1. The Absorption Rule
-Assume AI models become 10× smarter, faster, and cheaper.
-
-- Is the product still necessary?
-- Can the user perform its core job directly inside an AI model or platform?
-- Could the product's primary service become a generic, inexpensive built-in feature?
-
-### 2. Grow With AI
 Ask:
+- Is the product still necessary?
+- What remains if the core function becomes native inside the model?
+- Why would customers keep using this product instead of doing the job directly in a general AI system?
 
+### 2. AI Tailwind — weight 15
 - Does model improvement automatically make the product better?
-- Or does every improvement reduce the need for it?
-- If global AI usage grows 100×, does the problem this product solves become larger or smaller?
+- Or does each improvement reduce the need for it?
+- If global AI usage grows 100×, does the underlying problem become larger or smaller?
 
-### 3. What If This Capability Becomes Native?
-Assume any AI model or platform adds the product's core function as a cheap, built-in capability available to everyone.
-
-- What remains of the product?
-- Why would customers continue using it?
-- Is the value in the function itself, or in something deeper that a general model cannot easily provide?
-
-### 4. The Wrapper Test
-Determine clearly:
-
-- Is the product essentially an interface + prompt + model?
-- What does the product own beyond the model's capabilities?
+### 3. Wrapper Dependence — weight 10
+- Is the product essentially interface + prompt + model?
+- What does it own beyond model capability?
 - If the model were removed, what infrastructure, assets, relationships, or proprietary value would remain?
 
-### 5. Compounding Assets
+### 4. Compounding Assets — weight 15
 Look for assets that become more valuable with usage, such as:
-
 - Proprietary data
 - Long-term context
 - Decision history
-- User or organization relationships
-- Network effects
+- Relationships or network effects
 - Institutional knowledge
 - Operational records
 - Integrations
 - Identity and permissions
-- Repeated processes
 - A system of record
 
 If nothing meaningful compounds over time, treat that as a warning sign.
 
-### 6. Workflow Embed
-Evaluate whether the product is a side tool or part of a real operational workflow.
+### 5. Workflow Depth — weight 15
+Evaluate whether the product is a side tool or part of a real operating workflow.
 
 A stronger pattern is:
-
 **Input → Understanding → Decision → Execution → Follow-up → Recorded outcome**
 
-The more real work flows through the product, the harder it is to absorb.
+The more real work, decisions, and execution flow through the product, the harder it is to absorb.
 
-### 7. The Replication Test
-Assume a capable team has access to the latest AI models and generative coding tools.
+### 6. Replication Resistance — weight 10
+Assume a capable team has access to the latest models and generative coding tools.
 
-- How much of the product could they reproduce in one week?
+- How much could they reproduce in one week?
 - What part would remain difficult to copy?
-- Is there a real moat, or only faster execution and a nicer interface?
+- Is there a real moat, or only a nicer interface and faster execution?
 
-### 8. Find Problems Created by AI
-Do not ask only:
+### 7. AI-Expanded Problem — weight 5
+Do not ask only: **What can AI do?**
 
-**What can AI do?**
+Also ask: **What new problem has AI adoption created or made significantly larger?**
 
-Also ask:
+A product solving a bottleneck that expands with AI adoption is usually more durable than one selling a capability the model itself can learn.
 
-**What new problem has widespread AI adoption created or made significantly worse?**
-
-Products that solve bottlenecks created by AI's success may be more durable than products selling a capability the model itself can eventually learn.
-
-### 9. Model Independence
-Evaluate:
-
-- Can the underlying model or provider be replaced without destroying the product's value?
+### 8. Model Independence — weight 5
+- Can the model or provider be replaced without destroying product value?
 - Is the model a replaceable supplier?
-- Or is nearly all product value tied to one model capability?
+- Or is most of the value tied to one model capability or provider?
 
-### 10. The Defensive Path
-Determine whether the product can evolve along this path:
+---
 
-**Painkiller → Workflow → Compounding Asset → System of Record / System of Control**
+## Scoring
 
-Meaning:
+Score every test from **0 to 4**:
 
-1. Solve a real pain.
-2. Become embedded in daily workflow.
-3. Accumulate an asset that is difficult to copy.
-4. Become the place where truth is stored or where decisions and execution flow.
+- **0** = extremely fragile / directly dependent on current model limitations
+- **1** = weak defensibility
+- **2** = mixed / uncertain
+- **3** = strong defensibility
+- **4** = very strong and benefits from AI progress
+
+Calculate each weighted score as:
+
+`weighted score = (score ÷ 4) × weight`
+
+Add them for a total out of 100.
+
+### Verdict thresholds
+- **80–100** 🟢 Grows with AI
+- **60–79** 🟡 Can survive, but needs a stronger moat or positioning
+- **40–59** 🟠 At risk of absorption
+- **0–39** 🔴 Likely to be absorbed
+
+Do not use the number as a substitute for judgment; use it to make evaluations more consistent.
 
 ---
 
 ## Discussion Style
 
-Do not give me a final score immediately.
+Do not give the final verdict immediately.
 
-First, summarize the idea in two lines and identify the two or three most important assumptions behind it.
-
-Then challenge the weaknesses one by one. Ask questions only when the answer could materially change the judgment.
+1. Summarize the idea in two lines.
+2. Identify the two or three most important assumptions behind it.
+3. Challenge the weaknesses one by one.
+4. Ask questions only when the answer could materially change the judgment.
+5. Clearly separate known facts from assumptions.
 
 Stress-test the idea against:
-
 - Rapid model improvement
 - Model providers moving up the application stack
 - Ease of replication
@@ -136,30 +129,35 @@ At the same time, identify anything that could make the product stronger over ti
 
 ## Final Output
 
-After the discussion, provide the conclusion in this format:
+### Result
+- **Score:** X/100
+- **Verdict:** 🟢 / 🟡 / 🟠 / 🔴
+- **Confidence:** low / medium / high
 
-### Verdict
-Choose exactly one:
+### Score table
+For each test show: score out of 4, weight, weighted score, and a short reason.
 
-- 🟢 Grows with AI
-- 🟡 Can survive, but needs a stronger moat or positioning
-- 🟠 At risk of absorption
-- 🔴 Likely to be absorbed
-
-### Why
+### Why?
 Exactly 3 points.
 
-### What will the model absorb?
-Identify the functions most likely to become generic built-in capabilities.
+### What is likely to be absorbed?
+Identify functions most likely to become generic built-in capabilities.
 
 ### What can be defended?
-Identify the data, workflow, network, relationships, or compounding assets that can be built.
+Identify data, workflow, network, relationships, or compounding assets that can be built.
 
 ### Best modification
 Suggest one change that would make the product benefit from AI progress rather than fear it.
 
+### Defensive path
+Evaluate whether the product can move toward:
+**Painkiller → Workflow → Compounding Asset → System of Record / System of Control**
+
 ### The decisive question
 End with one question: if I cannot answer it convincingly, I probably should not build the product.
+
+### Optional structured output
+If I ask for `JSON`, return a result compatible with `schema/result.schema.json` and no prose outside the JSON object.
 
 ---
 
@@ -171,4 +169,4 @@ Here is the product idea:
 
 ---
 
-Licensed under the MIT License. Free to use, copy, modify, translate, and improve.
+Licensed under the MIT License.

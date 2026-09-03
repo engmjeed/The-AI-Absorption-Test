@@ -1,0 +1,54 @@
+name: Framework improvement
+description: Propose a scoring, terminology, Survival Design, Skill, or methodology improvement.
+title: "[Framework]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve The AI Absorption Test. Keep proposals focused on one distinct problem.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is unclear, inconsistent, missing, or producing weak evaluations?
+      placeholder: Describe the problem and where it appears.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What should change, and why is it better?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Scoring
+        - Terminology
+        - Survival Design
+        - Agent Skill
+        - Arabic wording
+        - English wording
+        - JSON / schema
+        - Examples
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example or evidence
+      description: Show a product example, before/after result, or evidence that demonstrates the improvement.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked TERMINOLOGY.md and this is not just an alternate synonym.
+          required: true
+        - label: This proposal adds a distinct mechanism rather than duplicating an existing dimension or principle.
+          required: true

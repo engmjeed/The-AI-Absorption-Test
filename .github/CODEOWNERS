@@ -1,0 +1,14 @@
+# The AI Absorption Test — Code Owners
+# Every change to the framework requires maintainer review.
+
+* @engmjeed
+
+# Core framework contracts
+/SKILL.md @engmjeed
+/TERMINOLOGY.md @engmjeed
+/SCORING.md @engmjeed
+/PRINCIPLES.md @engmjeed
+/PROMPT_AR.md @engmjeed
+/PROMPT_EN.md @engmjeed
+/schema/ @engmjeed
+/.github/ @engmjeed

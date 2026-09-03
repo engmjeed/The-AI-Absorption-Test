@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use The AI Absorption Test in research, analysis, or product work, please cite the repository."
+title: "The AI Absorption Test"
+type: software
+authors:
+  - family-names: "Falah"
+    given-names: "Abdulmajeed"
+    alias: "engmjeed"
+version: "0.2.1"
+date-released: "2026-09-03"
+license: MIT
+repository-code: "https://github.com/engmjeed/The-AI-Absorption-Test"
+url: "https://github.com/engmjeed/The-AI-Absorption-Test"
+abstract: >-
+  An open-source framework for testing whether a product becomes more valuable as AI improves
+  or risks having its core value absorbed into general AI capabilities, with a structured
+  Survival Design for redesigning products around durable value.
+keywords:
+  - artificial intelligence
+  - product strategy
+  - product management
+  - startups
+  - defensibility
+  - product design

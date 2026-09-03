@@ -1,0 +1,52 @@
+name: Validate framework
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validator
+        run: python -m pip install --disable-pip-version-check jsonschema
+
+      - name: Validate JSON schema and example
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from jsonschema import Draft202012Validator
+
+          schema = json.loads(Path("schema/result.schema.json").read_text(encoding="utf-8"))
+          example = json.loads(Path("examples/result.example.json").read_text(encoding="utf-8"))
+          Draft202012Validator.check_schema(schema)
+          Draft202012Validator(schema).validate(example)
+          print("Schema and example are valid.")
+          PY
+
+      - name: Verify framework contract files
+        run: |
+          test -f SKILL.md
+          test -f TERMINOLOGY.md
+          test -f SCORING.md
+          test -f PRINCIPLES.md
+          test -f PROMPT_AR.md
+          test -f PROMPT_EN.md
+          grep -q 'framework_version: "0.2.1"' SKILL.md
+          grep -q 'Canonical Terminology' TERMINOLOGY.md
+          grep -q 'The AI Absorption Test' README.md

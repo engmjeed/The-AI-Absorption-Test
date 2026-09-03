@@ -1,55 +1,42 @@
-# Example 02 — Meeting Intelligence Product
+# Example 02 — Meeting Intelligence Workflow
 
-> Illustrative archetype. This is not a claim about any specific company.
+An educational example using **The AI Absorption Test**.
 
-## Product idea
+## Product archetype
+A product that records meetings, transcribes them, extracts decisions and action items, syncs them to CRM/project systems, builds team memory, and tracks follow-up over time.
 
-A product that records meetings, transcribes them, summarizes discussion, extracts action items, and keeps a searchable history for a team.
+This is an archetype, not a claim about a specific company.
 
-## Result
+## Assumptions
+- Strong integrations with calendar, CRM, and project tools.
+- Historical meeting context compounds over time.
+- The product participates in follow-up workflows, not transcription alone.
 
-**Score: 62.5/100 — 🟡 Can survive, but needs stronger defensibility**
+## Evaluation
 
-| Dimension | Score / 4 | Weight | Weighted |
+| Dimension | Score (0–4) | Weight | Weighted |
 |---|---:|---:|---:|
-| Absorption Resistance | 2 | 25 | 12.50 |
-| AI Tailwind | 3 | 15 | 11.25 |
-| Wrapper Dependence | 2 | 10 | 5.00 |
-| Compounding Assets | 3 | 15 | 11.25 |
-| Workflow Depth | 3 | 15 | 11.25 |
-| Replication Resistance | 2 | 10 | 5.00 |
-| AI-Expanded Problem | 2 | 5 | 2.50 |
-| Model Independence | 3 | 5 | 3.75 |
-| **Total** |  | **100** | **62.50** |
+| Absorption resistance | 2 | 20 | 10.0 |
+| AI growth alignment | 3 | 15 | 11.25 |
+| Compounding assets | 3 | 15 | 11.25 |
+| Workflow depth | 3 | 15 | 11.25 |
+| Replication resistance | 2 | 10 | 5.0 |
+| AI-created problem tailwind | 3 | 10 | 7.5 |
+| Model independence | 4 | 5 | 5.0 |
+| Defensive path | 3 | 10 | 7.5 |
+| **Total** |  | **100** | **68.75** |
 
-## Why the answer is mixed
+## Verdict
+🟡 **Can survive, but needs stronger defensibility — 68.75/100**
 
-1. Transcription, summarization, and action-item extraction can become native capabilities in communication platforms and general AI assistants.
-2. Long-term organizational history, permissions, integrations, and follow-through can create value beyond the model itself.
-3. The product becomes much stronger if it owns what happens **after** the meeting, not just what happened **during** it.
+## Biggest absorption risk
+Transcription, summarization, and action-item extraction can become native capabilities inside conferencing platforms and general AI assistants.
 
-## What is likely to be absorbed?
-
-- Transcription
-- Summaries
-- Speaker identification
-- Basic action-item extraction
-- Asking questions about one meeting
-
-## What can become defensible?
-
-- Cross-meeting institutional memory
-- Decision history
-- Team and project context
-- Permission-aware knowledge
-- Automatic task creation and follow-up
-- CRM/project-management integrations
-- Tracking whether commitments were completed
+## Strongest defensible asset
+Longitudinal organizational memory connected to execution systems and customer-specific workflows.
 
 ## Best modification
-
-Move from **meeting notes** to **decision and execution memory**: connect meetings to projects, owners, deadlines, outcomes, and future decisions.
+Move the center of gravity away from meeting summaries and toward owning the post-meeting execution loop: commitments, approvals, CRM updates, follow-up, accountability, and decision history.
 
 ## Decisive question
-
-**If transcription and summarization become free inside every meeting platform, does the product still own a mission-critical workflow after the meeting ends?**
+If transcription and summarization become free native features, does the product still own an operational workflow customers cannot easily replace?

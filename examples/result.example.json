@@ -1,0 +1,91 @@
+{
+  "product_summary": "An AI-assisted compliance platform that turns regulatory requirements into operational workflows, approvals, evidence requests, deadlines, and an auditable system of record.",
+  "assumptions": [
+    "The product is used inside a regulated organization rather than only as a document Q&A tool.",
+    "It stores organization-specific evidence, permissions, decisions, and workflow history.",
+    "Underlying AI models can be replaced over time."
+  ],
+  "score": 95,
+  "verdict": "grows_with_ai",
+  "confidence": "high",
+  "dimensions": [
+    {
+      "id": "absorption_resistance",
+      "score": 4,
+      "weight": 25,
+      "weighted_score": 25,
+      "reason": "Native model improvements can absorb analysis tasks, but not the organization's governed compliance process and record."
+    },
+    {
+      "id": "ai_tailwind",
+      "score": 4,
+      "weight": 15,
+      "weighted_score": 15,
+      "reason": "Better models reduce the cost of interpreting documents and increase the product's automation capacity."
+    },
+    {
+      "id": "wrapper_dependence",
+      "score": 3,
+      "weight": 10,
+      "weighted_score": 7.5,
+      "reason": "AI is important, but the product also owns workflow, permissions, audit state, and integrations."
+    },
+    {
+      "id": "compounding_assets",
+      "score": 4,
+      "weight": 15,
+      "weighted_score": 15,
+      "reason": "Evidence, mappings, decision history, and organizational controls compound over time."
+    },
+    {
+      "id": "workflow_depth",
+      "score": 4,
+      "weight": 15,
+      "weighted_score": 15,
+      "reason": "The product participates in assignment, approval, remediation, follow-up, and audit."
+    },
+    {
+      "id": "replication_resistance",
+      "score": 3,
+      "weight": 10,
+      "weighted_score": 7.5,
+      "reason": "The interface can be copied quickly, but mature integrations, regulatory mappings, and customer history cannot."
+    },
+    {
+      "id": "ai_expanded_problem",
+      "score": 4,
+      "weight": 5,
+      "weighted_score": 5,
+      "reason": "More automated systems increase the need for governance, evidence, control, and auditability."
+    },
+    {
+      "id": "model_independence",
+      "score": 4,
+      "weight": 5,
+      "weighted_score": 5,
+      "reason": "The model can be treated as a replaceable inference supplier."
+    }
+  ],
+  "why": [
+    "Core AI capabilities becoming cheaper improves product economics rather than removing the operational need.",
+    "The product accumulates organization-specific data, workflow state, permissions, and audit history.",
+    "It can become a system of record and control rather than a standalone AI feature."
+  ],
+  "likely_to_be_absorbed": [
+    "document summarization",
+    "obligation extraction",
+    "policy drafting",
+    "basic gap analysis"
+  ],
+  "defensible_assets": [
+    "audit history",
+    "organization-specific controls",
+    "evidence records",
+    "approval workflows",
+    "regulatory mappings",
+    "operational integrations"
+  ],
+  "best_modification": "Move deeper into execution by automatically requesting evidence, routing approvals, validating remediation, and preserving complete audit history.",
+  "defensive_path": "Painkiller → Workflow → Compounding Asset → System of Record / System of Control",
+  "decisive_question": "If every general model becomes excellent at reading regulations, does the customer still need this system to run, prove, and govern the compliance process?"
+}

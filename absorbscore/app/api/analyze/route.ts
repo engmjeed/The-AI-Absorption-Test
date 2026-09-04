@@ -1,10 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { lookup } from 'node:dns/promises';
+import { isIP } from 'node:net';
+
+export const runtime = 'nodejs';
 
 const MAX_HTML = 18000;
 
-function normalizeUrl(input: string) {
+function isPrivateIp(ip: string) {
+  if (!isIP(ip)) return false;
+  if (ip.includes(':')) {
+    const v = ip.toLowerCase();
+    return v === '::1' || v.startsWith('fc') || v.startsWith('fd') || v.startsWith('fe80:');
+  }
+  const [a, b] = ip.split('.').map(Number);
+  return a === 10 || a === 127 || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31) || (a === 192 && b === 168) || a === 0;
+}
+
+async function normalizeAndValidateUrl(input: string) {
   const u = new URL(input);
   if (!['http:', 'https:'].includes(u.protocol)) throw new Error('Only http/https URLs are supported');
+  if (u.username || u.password) throw new Error('Credentialed URLs are not supported');
+  const host = u.hostname.toLowerCase();
+  if (host === 'localhost' || host.endsWith('.local')) throw new Error('Private hosts are not supported');
+  const addresses = await lookup(host, { all: true, verbatim: true });
+  if (!addresses.length || addresses.some((a) => isPrivateIp(a.address))) throw new Error('Private-network URLs are not supported');
   return u.toString();
 }
 
@@ -27,10 +46,10 @@ function extractJson(text: string) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const url = normalizeUrl(String(body.url || ''));
+    const url = await normalizeAndValidateUrl(String(body.url || ''));
 
     const page = await fetch(url, {
-      redirect: 'follow',
+      redirect: 'error',
       headers: { 'user-agent': 'AbsorbScore/0.1 (+product survivability analysis)' },
       signal: AbortSignal.timeout(9000)
     });
